@@ -10,8 +10,11 @@
 $filepath = htmlspecialchars($_POST['filepath']);
 $Server = $_SERVER['SERVER_NAME'];
 $fullpath = 'https://'.$Server.'/'.$filepath;
+$endpoint = htmlspecialchars($_POST['endpoint']);
+
+//endpoint = ""https://southcentralus.api.cognitive.microsoft.com";
     
-$url="https://southcentralus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01";
+$url=$endpoint."/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_POST,TRUE);

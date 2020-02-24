@@ -7,7 +7,7 @@
 <body>
 <form enctype="multipart/form-data" action="savefile.php" method="post">
 <input type="file" name="test">
-<button type="submit">Загрузить изображение для анализа в Custom Vision</button>
+<button type="submit">Загрузить изображение для анализа в FaceAPI</button>
 </form>
 
 </body>

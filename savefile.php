@@ -67,7 +67,7 @@ try {
     <form action="recognize.php" method="post">
         <input type="hidden" name ="filepath" value="<?php echo $Uploaded_file_location?>">
         
-        <input type="text" name="url" required placeholder="вставьте url службы FaceAPI" size="100"><br>
+        <input type="text" name="endpoint" required placeholder="вставьте конечную точку службы FaceAPI" size="100"><br>
 <input type="text" name="key" required placeholder="вставьте ключ службы FaceAPI" size="100"><br>
         <button type="submit">Отправить для рампознавания в Face API</button>
     </form>
