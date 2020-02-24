@@ -12,7 +12,7 @@ $Server = $_SERVER['SERVER_NAME'];
 $fullpath = 'https://'.$Server.'/'.$filepath;
 $endpoint = htmlspecialchars($_POST['endpoint']);
 
-//endpoint = ""https://southcentralus.api.cognitive.microsoft.com";
+//endpoint = "https://southcentralus.api.cognitive.microsoft.com";
     
 $url=$endpoint."/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&recognitionModel=recognition_01&returnRecognitionModel=false&detectionModel=detection_01";
 
@@ -22,7 +22,7 @@ curl_setopt($ch, CURLOPT_POST,TRUE);
 echo "распознаем изображение...<br><img src=".$filepath." width='200' height='200'><br>";
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Prediction-Key: '.$key,
+        'Ocp-Apim-Subscription-Key: '.$key,
         'Content-Type: application/json'
     ));
 
